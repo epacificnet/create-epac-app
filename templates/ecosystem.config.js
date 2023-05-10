@@ -1,6 +1,6 @@
 module.exports = {
-  apps: [{
-    name: 'create-epas-app',
+  apps : [{
+    name: '{{ appName }}',
     script: 'app.js',
     instance_var: 'INSTANCE_ID',
     exec_mode: 'fork',
@@ -12,12 +12,12 @@ module.exports = {
       NODE_ENV: 'production',
       LOGLEVEL: 'info',
       HTTP_PORT: 3000,
-      CALLER_ID: '',
       ACCOUNT_SID: '',
       API_KEY: '',
       REST_API_BASE_URL: '',
       WEBHOOK_SECRET: '',
+      HTTP_USERNAME: '',
       WS_RECORD_PATH: ''
     }
-  }]  
+  }]
 };

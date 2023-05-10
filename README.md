@@ -1,21 +1,31 @@
-# create-epas-app
+# create-epas-app 
 
-This application was created with the [create ePas command](https://www.npmjs.com/package/create-epas-app).  This documentation was generated at the time when the project was generated and describes the functionality that was initially scaffolded.  Of course, you should feel free to modify or replace this documentation as you build out your own logic.
+Usage: npx create-epas-app [options] project-name
+```
+Options:
+  -h, --help                        display help for command
+  -s, --scenario <scenarios..>      list the scenarios you want to implement or 'all' (default: ["tts", "dial"])
+  -v, --version                     display the current version
+```
 
-## Endpoints
+The following scenarios are available:
+- auth: an example device registration webhook
+- dial: an example dial verb
+- record: an example websocket server that receives real-time audio from a 'listen' command 
+- tts: an example tts verb
 
-Based on the options that you have chosen, this application exposes the following HTTP endpoints:
+**Example**: 
 
-### /auth
-A simple example of authenticating sip devices.
+```bash
+$ npx create-epas-app --scenarios 'dial, auth, tts' my-app
 
-### /dial-time
-Dials out through your carrier to a US-based [speaking time clock service](https://www.nist.gov/time-distribution/radio-station-wwv/telephone-time-day-service).
+Creating a new ccall app in /Users/perpich/test/my-app
+Installing packages...
+```
+After that, edit the my-app/ecosystem.config.js file to set necessary environment variables for the webhooks and then start your app
 
-### /hello-world
-Answers incoming call and plays a greeting using text-speech
-
-### /record
-A websocket server that receives audio from a 'listen' verb and uploads into an AWS S3 bucket.
-
-
+```bash
+cd my-app
+edit ecosystem.config.js
+node app.js
+```bash
