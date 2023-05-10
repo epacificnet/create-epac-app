@@ -1,6 +1,6 @@
 {
   "name": "{{ appName }}",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "webhook application",
   "main": "app.js",
   "scripts": {
@@ -10,7 +10,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@epac/node-client": "^0.3.31",
+    "@epac/node-client": "^0.3.32",
     "aws-sdk": "^2.1251.0",
     "debug": "^4.3.4",
     "express": "^4.18.2",

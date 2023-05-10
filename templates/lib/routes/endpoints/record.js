@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const WebhookResponse = require('epac/node-client').WebhookResponse;
+const WebhookResponse = require('@epac/node-client').WebhookResponse;
 
 router.post('/', (req, res) => {
   const {logger} = req.app.locals;
