@@ -11,7 +11,7 @@ const app = express();
 {% if record %}
 const Websocket = require('ws');
 {% endif %}
-const {WebhookResponse} = require('tin-node-client');
+const {WebhookResponse} = require('@epac/node-client');
 const basicAuth = require('express-basic-auth');
 const opts = Object.assign({
   timestamp: () => `, "time": "${new Date().toISOString()}"`,
@@ -29,7 +29,7 @@ app.locals = {
 {% if auth %}
   calculateResponse,
 {% endif %}
-  client: require('tin-node-client')(process.env.ACCOUNT_SID, process.env.API_KEY, {
+  client: require('@epac/node-client')(process.env.ACCOUNT_SID, process.env.API_KEY, {
     baseUrl: process.env.REST_API_BASE_URL
   })
 };
@@ -50,7 +50,7 @@ if (process.env.HTTP_USERNAME && process.env.HTTP_PASSWORD) {
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 if (process.env.WEBHOOK_SECRET) {
-  app.use(WebhookResponse.verifytinSignature(process.env.WEBHOOK_SECRET));
+  app.use(WebhookResponse.verifyepacSignature(process.env.WEBHOOK_SECRET));
 }
 app.use('/', routes);
 app.use((err, req, res, next) => {

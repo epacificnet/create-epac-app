@@ -5,6 +5,8 @@ router.use('/call-status', require('./call-status'));
 router.use('/hello-world', require('./tts-hello-world'));
 {% endif %}
 {% if dial %}
+router.use('/dial', require('./dial'));
+router.use('/gather', require('./gather'));
 router.use('/dial-time', require('./dial-time'));
 {% endif %}
 {% if auth %}
@@ -13,7 +15,5 @@ router.use('/auth', require('./auth'));
 {% if record %}
 router.use('/record', require('./record'));
 {% endif %}
-router.use('/dial', require('./dial'));
-router.use('/gather', require('./gather'));
 
 module.exports = router;
