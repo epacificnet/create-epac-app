@@ -34,7 +34,7 @@ const pluginFiles = {
 const pkg = require(`${__dirname}/../package.json`);
 program.version(pkg.version, '-v, --version', 'display the current version');
 program
-  .name('create-epas-app')
+  .name('create-epac-app')
   .usage('[options] project-name')
   .addHelpText('after', `
 
@@ -46,7 +46,7 @@ Scenarios available:
 - all: generate all of the above scenarios
 
 Example:
-  $ npx create-epas-app my-app`)
+  $ npx create-epac-app my-app`)
   .option('-s, --scenario <scenario>',
     'generates sample webhooks for specified scenarios, default is dial and tts', 'tts, dial');
 
@@ -140,7 +140,7 @@ const spawnCommand = (cmd, args) => {
 
   renderFolder(`${__dirname}/../templates`, process.cwd());
 
-  const packages = ['@epas/node-client', 'pino', 'debug', 'express', 'express-basic-auth'];
+  const packages = ['@epac/node-client', 'pino', 'debug', 'express', 'express-basic-auth'];
   const devPackages = ['eslint-plugin-promise', 'eslint'];
   if (opts.scenario.includes('record') || opts.scenario.includes('auth') || includeAll) {
     Array.prototype.push.apply(packages, [

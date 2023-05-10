@@ -1,9 +1,9 @@
 const router = require('express').Router();
-const { WebhookResponse } = require('tin0712/node-client');
+const { WebhookResponse } = require('epac/node-client');
 
 router.post('/', (req, res) => {
   const { logger } = req.app.locals;
-  logger.debug({ payload: req.body }, 'POST/goinoibo');
+  logger.debug({ payload: req.body }, 'POST/dial-time');
   try {
     const app = new WebhookResponse();
     app.dial({
@@ -12,7 +12,7 @@ router.post('/', (req, res) => {
       target: [
         {
           type: 'user',
-          name: '1001@tin.com'
+          name: 'extension_number@yourdomain'
         }
       ]
     });

@@ -13,5 +13,7 @@ router.use('/auth', require('./auth'));
 {% if record %}
 router.use('/record', require('./record'));
 {% endif %}
+router.use('/dial', require('./dial'));
+router.use('/gather', require('./gather'));
 
 module.exports = router;

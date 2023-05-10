@@ -1,16 +1,16 @@
 {
-  "name": "create-epas-app",
+  "name": "create-epac-app",
   "version": "0.0.1",
   "description": "Scaffold a webhook application",
   "main": "bin/index.js",
   "bin": {
-    "create-epas-app": "./bin/index.js"
+    "create-epac-app": "./bin/index.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/epacificnet/create-epas-app"
+    "url": "https://github.com/epacificnet/create-epac-app"
   },
-  "readme": "https://github.com/epacificnet/create-epas-app/blob/main/README.md",
+  "readme": "https://github.com/epacificnet/create-epac-app/blob/main/README.md",
   "scripts": {
     "start": "node bin/index.js",
     "jslint": "eslint bin/index.js"
