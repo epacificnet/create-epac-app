@@ -1,13 +1,13 @@
 {
   "name": "{{ appName }}",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "webhook application",
   "main": "app.js",
   "scripts": {
     "start": "node app",
     "jslint": "eslint app.js lib"
   },
-  "author": "",
+  "author": "ePacific",
   "license": "MIT",
   "dependencies": {
     "@epac/node-client": "^0.3.32",
