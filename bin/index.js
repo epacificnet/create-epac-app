@@ -15,6 +15,7 @@ const scenarios = [
 ];
 const baseFiles = [
   'package.json',
+  'package-lock.json',
   'app.js',
   'index.js',
   'call-status.js',
@@ -22,13 +23,14 @@ const baseFiles = [
   '.eslintignore',
   '.gitignore',
   'README.md',
-  'ecosystem.config.js'
+  'ecosystem.config.js',
+  'LISENCE'
 ];
 const pluginFiles = {
   tts: ['tts-hello-world.js'],
-  dial: ['dial-time.js'],
+  dial: ['dial-time.js', 'dial', 'gather'],
   record: ['record.js', 'utils.js'],
-  auth: ['auth.js', 'utils.js', 'credentials.json']
+  auth: ['auth.js', 'utils.js', 'call-status-emitter.js','credentials.json']
 };
 
 const pkg = require(`${__dirname}/../package.json`);

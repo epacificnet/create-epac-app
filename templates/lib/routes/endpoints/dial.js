@@ -17,7 +17,7 @@ router.post('/', (req, res) => {
         target: [
           {
             type: 'user',
-            name: 'your-extension@yourdomain.com',
+            name: 'extension_number@yourdomain',
           }
         ]
       });

@@ -16,7 +16,7 @@ module.exports = {
       API_KEY: '',
       REST_API_BASE_URL: '',
       WEBHOOK_SECRET: '',
-      HTTP_USERNAME: '',
+      CALLER_ID: '',
       WS_RECORD_PATH: ''
     }
   }]

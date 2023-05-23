@@ -29,7 +29,7 @@ app.locals = {
 {% if auth %}
   calculateResponse,
 {% endif %}
-  client: require('@epac/node-client')(process.env.ACCOUNT_SID, process.env.API_KEY, {
+  client: require('@epas/node-client')(process.env.ACCOUNT_SID, process.env.API_KEY, {
     baseUrl: process.env.REST_API_BASE_URL
   })
 };
